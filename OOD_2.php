@@ -65,6 +65,14 @@ public function getAge()
 return $this->age;
 }
 
+public function __construct($name,$dni,$surname_1,$surname_2,$age){
+  $this->name=$name;
+  $this->dni=$dni;
+  $this->surname_1=$surname_1;
+  $this->surname_2=$surname_2;
+  $this->age=$age;
+}
+
 public function print()
 {
 echo "Name: $this->name <br>";
@@ -76,12 +84,12 @@ echo "Age: ". $this->getAge() ."<br>";
 
 }//end class Student
 
-$alumne1=new Student();//creating object using a default constructor
-$alumne1->setName('Adrian');
-$alumne1->setDni('23344556D');
-$alumne1->setSurname_1('Cuevas');
-$alumne1->setSurname_2('de la Cruz');
-$alumne1->setAge(21);
+$alumne1=new Student('Adrian','23344556D','Cuevas','de la Cruz',21);//creating object using a default constructor
+// $alumne1->setName('Adrian');
+// $alumne1->setDni('23344556D');
+// $alumne1->setSurname_1('Cuevas');
+// $alumne1->setSurname_2('de la Cruz');
+// $alumne1->setAge(21);
 $alumne1->print();
 
 ?>
